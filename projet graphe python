@@ -1,0 +1,27 @@
+Projet - graphe python
+
+Il existe en Python un package pour gérer et dessiner des graphes. 
+Nous allons l’utiliser pour afficher les graphes de duels. 
+
+Il faut utiliser le fichier polTests.py (donné sur Moodle) et 
+remplacer la ligne de commentaire "écrire les arcs ici" par autant de lignes que nécessaire du type :
+G.add_edges_from([(i,j)],weight=p)
+où i et j sont des sommets et p le poids. 
+
+En clair il faut faire une boucle sur les i, j et p en utilisant la matrice des duels.
+Le mieux est de sauver le programme Python modifié dans un nouveau fichier .py. 
+On affiche le graphe grâce à la commande "python nouveaufichier.py".
+En clair :
+— Lire le fichier polTests.py et recopier les lignes telles qu’elles dans un autre fichier .py
+— A la place de la ligne de commentaire Python : "écrire les arcs ici",
+      écrire le texte "G.add_edges_from(["
+      écrire i,
+      écrire ","
+      écrire j,
+      écrire ")],weight=",
+      écrire p,
+      écrire enfin ")"
+— Répéter le point précédent autant de fois qu’il y a d’arcs (i, j, p) dans le graphe de duels.
+— finir de recopier le fichier polTests.py dans le nouveau fichier .py.
+
+(d'après cours projet)
