@@ -1,0 +1,55 @@
+
+
+déf : 
+CSV est le sigle de Coma Separated Values, qui peut se traduire par « valeurs séparées par des virgules ».
+Il s’agit d’un format de fichier qui se caractérise par la représentation de données tabulaires sous forme de texte, 
+les valeurs de chaque cellule étant séparées par des virgules ou des points-virgules.
+
+
+
+La méthode générale est la suivante :
+— Analyse des balises.
+— Lire le fichier csv et remplir une matrice de chaînes de type t_mat_char_star_dyn (pour −i et −d).
+On conserve la ligne des entêtes.
+Balise
+Paramètre
+Action
+-i
+nom de fichier csv
+traite le fichier cité
+-d
+nom de fichier csv
+traite le fichier cité
+-l optionnel
+nom de fichier txt
+fichier de log
+-m optionnel
+méthode
+précise la méthode de scrutin à utiliser
+paramètre
+méthode associée
+cm
+méthode de Condorcet et minimax
+cp
+méthode de Condorcet et rangement des paires
+cs
+méthode de Condorcet et méthode de Schulze
+va
+vote alternatif
+8
+— Créer la matrice des duels à partir du tableau précédent (le traitement tiendra compte de l’option −i ou −d). 
+Le type est t_mat_int_dyn.
+— Créer la liste des arcs correspondants à la matrice (on crée le graphe).
+— Créer le fichier python pour afficher le graphe.
+— Appliquer la méthode de scrutin sur la matrice des duels ou sur le graphe suivant les méthodes (l’un
+ou l’autre sont plus naturels suivant les méthodes).
+— Afficher les résultats.
+Votre programme sera compilé au moyen d’un Makefile et l’exécutable portera le nom de scrutin.
+L’affichage des résultats sera normalisé suivant la forme :
+Mode de scrutin : <nom de la méthode>, <nb> candidats, <nb>, votants, vainqueur = <nom du vainqueur>
+Dans le cas des scrutins uninominaux on affichera le score en plus :
+Mode de scrutin : <nom de la méthode>, <nb> candidats, <nb>, votants, vainqueur = <nom du vain- queur>, score = <nb>%
+Pour simplifier les affichages et utiliser le même sous-programme, le scrutin uninominal à deux tours,
+fera deux affichages pour le tour 1 (un pour chacun des deux candidats de tête), et un affichage pour le second tour.
+
+
